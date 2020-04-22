@@ -2,10 +2,11 @@ body{
     width: 98%;
     margin: auto;
     font-size: 16px;
+background: rgb(244,140,124);
+background: linear-gradient(180deg, rgba(244,140,124,1) 0%, rgba(251,193,84,1) 50%, rgba(100,252,69,1) 100%);
 }
 header{
     width: 100%;
-    background-color: green;
     padding-bottom: 2%;
 }
 header h1{
