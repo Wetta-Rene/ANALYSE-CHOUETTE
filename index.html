@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        	<link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/440b1b0c24.js" crossorigin="anonymous"></script>
+        <title>Analyse d'un site "La chouette Agence - Projet 4 [OC]</title>
+    </head>
+
+<body>
+<header>
+<h1>Analyse du site: La chouette Agence</h1>
+    
+    <fieldset><legend>Comment être bien référencé ?</legend>
+         <ul>
+            <li>Site fluide (rapide)</li>
+            <li>Site structuré</li>
+            <li>Beau visuel</li>
+        </ul>  
+    </fieldset>
+</header>
+    
+<div id="contenairePage">
+<section id="auCommencement">
+        <h2>Les sites utilisés:</h2>
+        <ul>
+            <li><a href="https://gtmetrix.com">GT Metrix</a> et <a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed</a> pour une analyse de la vitesse d'affichage.</li>
+            <li><a href="https://alyze.info">Alyse</a> et <a href="https://wave.webaim.org">Wave Web accessibility</a> pour les problèmes de référencement.</li>     
+        </ul>
+</section>
+    
+    
+<section id="partA">   
+    <h2>A. La fluiditée</h2>
+    <article class="article">
+        <h3>Le test de vitesse:</h3>
+        <div class="divImgSimple">
+            <img src="IMAGES-ANALYSE/Capture%201%20-%20Modification%20=%200.png" alt="test-origine-modification-0" title="image test origine" />
+        </div>
+        <div class="explications">
+        <i class="fas fa-arrow-right"></i> Images non optimisés.<br />
+        <i class="fas fa-arrow-right"></i> Images redimensionnés en css (forcées).
+            <p>
+            Explication:<br/><br />
+                La note est mauvaise, le site met beaucoup de temps à être téléchargé du serveur (pour l'affichage sur le navigateur).<br />
+                Il faut en premier temps essayé de réduire le poid des images , les utiliser différement, et réduire le temps de lecture du css...
+            </p>
+        </div>
+    </article>
+    <article class="article">
+        <h3>Travail sur les images</h3>
+                <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Changer le format de certaines images vers des formats plus compressible (.bmp/ .jpg > .jp2)</div>
+                <div class="divImgSimple">
+                <img src="IMAGES-ANALYSE/Capture%207%20-%20Format%20bmp%20en%20jpeg200.png" alt="capture-format-a-changer" title="image-format-a-changer" />
+                </div>
+        
+                <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Compresser les images avec un lociciel (jusqu'à 87% pour ce site sur une image)</div>
+                <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Redimensionner les images à la taille ou elles vont s'affichée (gain de temps pour le navigateur, pas besoin de "réduire l'image une fois téléchargée")</div>
+            
+    </article>
+    <article class="article">        
+        
+                <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il faut utiliser le cache du navigateur (non pas pour chargé rapidement la première fois, mais pour mettre dans le cache les parties du site qui ne "changent pas souvant", afin d'accèlérer les prochaines visite.)</div>
+        
+        <div class="explications">
+            <i class="fas fa-arrow-right"></i> Donc mis en place d'un fichier .htaccess à la racine du site pour dire au serveur qu'il doit mettre dans le cache du navigateur les images.
+        </div>
+        <div class="divImfSimple">
+        <img src="IMAGES-ANALYSE/Capture%2010%20-%20.htaccess.png" alt="insertion-htacess-racine" title="image-htaccess" />
+        </div>
+    </article>
+    <article class="article">
+        <h3>Compression des pages de rendu</h3>
+                <div class="divImfSimple">
+                    <img src="IMAGES-ANALYSE/Capture%204%20-%20Minify%20=%200.png" alt="capture-avant-minify" title="capture-etat-avant-minify" />
+                </div>
+        
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Dans une moindre mesure il faut également reduire le temps de lecture du fichier CSS et JS.</div>
+        
+        <div class="divImfSimple">
+            <img src="IMAGES-ANALYSE/Capture%20CSS%20Mini.png" alt="cc-mini" title="css-mini" />
+        </div>
+        <div class="explications">
+            <i class="fas fa-arrow-right"></i> Enlever les espaces entre les lignes de code permet de gagner du temps de téléchargement, pour cela on utilise un site qui fait "MINIFY et UNMINIFY" (ou extension de l'éditeur de texte)
+        </div>
+    </article>
+    <article class="article">
+        <h3>Premier résultat</h3>
+            <div class="row-images">
+                <div class="row-images-child">
+                <img src="IMAGES-ANALYSE/Capture%201%20-%20Modification%20=%200%20copie.png" />
+                </div>
+                <div class="row-images-child">
+                <img src="IMAGES-ANALYSE/Capture%208%20-%20images%20:%20css%20minimiz%20modif%20vitesse%20finale%20final%20copie.png" />
+                </div>
+            </div>
+        </article>
+</section>  
+
+<section id="partB">
+    <article class="article">
+    <h2>B. La structure du site/ accessibilité</h2>
+        <fieldset><legend>Qui référence et comment ?</legend>
+        <p>Le référencements des pages se fait par des robots qui lisent le site pour l'indexer dans le serveur de leur "socièté" (GoogleBot pour Google, OrangeBot pour Orange, BinhBot pour Bing) Il lit la/les page(s) pour trouvé les mots clés, la structure du site.</p> 
+    </fieldset>
+    </article>
+    <article class="article">
+        <h3>Constats suite à lecture du code html du site</h3>
+        
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Absence de fichier sitemaps et robots.txt</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> "Robot ne sait pas ce qu'il doit lire", précision sur les pages à indéxer ou pas (ADMIN)</div>
+
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balises du code html non optimisé (que des div).</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> Il faut une structure, header, section, article, div, footer.</div>
+            <div class="divImfSimple">   
+                <img src="IMAGES-ANALYSE/Cature%2016%20-%20indentation%20correct%20(section:%20article).png" />
+            </div>
+
+
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balise des titres, ordre non respecté</div>
+             <div class="explication">Il faut une stucture, H1 puis H2, puis H3 (sinon mettre div)</div>
+            <div class="row-images">
+                    <div class="row-images-child">
+                        <img src="IMAGES-ANALYSE/Capture%2014%20-%20balises%20non%20optimis%C3%A9s.png" />
+                    </div>
+                    <div class="row-images-child">
+                        <img src="IMAGES-ANALYSE/Capture%2015%20-%20dif%20H2:h3.png" />
+                    </div>
+            </div>
+                    
+                    
+                    
+                    
+        <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Manque balise label sur la page2.html</div>
+        <div class="erreur"><i class="fas fa-exclamation-triangle"></i> >>page2.html devrait s'appeller contact.html</div>
+            <div class="divImfSimple"> 
+             <img src="IMAGES-ANALYSE/Capture%2018%20-%20label.png" />
+            </div>
+        <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il vaut mieux mettre du texte qu'une image (analyse par le robot possible)</div>
+        <div class="explications"><i class="fas fa-arrow-right"></i> Mise en place d'un BLOCKquote à la place d'une image.</div>
+        <div class="row-images">
+                <div class="row-images-child">
+                    <img src="IMAGES-ANALYSE/Capture%20no-blockquote.png" />
+                </div>
+                <div class="row-images-child">
+                    <img src="IMAGES-ANALYSE/Capture%20blockquote.png" />
+                </div>
+        </div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Le retour des images:</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> Balise ALT et TITLE doivent être renseigné de façon explicite et unique. (ex: 1.jpg >> prise-de-photo.jp2, alt="prise-de-photo" title="shooting-photo")</div>
+             <div class="divImfSimple">
+                <img src="IMAGES-ANALYSE/Capture%2019%20-%20alt.png" />
+            </div>
+        </article>
+</section>
+    
+</div>   
+    
+    
+    
+    
+	<footer>
+
+	</footer>
+</body>
+</html>
