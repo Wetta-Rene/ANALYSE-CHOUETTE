@@ -19,6 +19,7 @@ fieldset{
     font-size: 1.2em;
     border-color: black;
     margin-top: 2%;
+    text-align: justify;
 }
 fieldset li{
     list-style-type: upper-alpha;
@@ -58,11 +59,13 @@ h3{
     color: red;
     font-size: 1.4em;
     margin-bottom: 1%;
+    width: 100%;
 }
 .divImgSimple{
     width: 80%;
     margin: auto;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 .divImgSimple img{
     width: 100%;
