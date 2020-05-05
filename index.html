@@ -15,7 +15,7 @@
          <ul>
             <li>Site fluide (rapide)</li>
             <li>Site structuré</li>
-            <li>Beau visuel</li>
+            <li>Conclusion</li>
         </ul>  
     </fieldset>
 </header>
@@ -63,21 +63,21 @@
                 <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il faut utiliser le cache du navigateur (non pas pour chargé rapidement la première fois, mais pour mettre dans le cache les parties du site qui ne "changent pas souvant", afin d'accèlérer les prochaines visite.)</div>
         
         <div class="explications">
-            <i class="fas fa-arrow-right"></i> Donc mis en place d'un fichier .htaccess à la racine du site pour dire au serveur qu'il doit mettre dans le cache du navigateur les images.
+            <i class="fas fa-arrow-right"></i> Donc mis en place d'un fichier .htaccess à la racine du site pour dire au serveur qu'il doit mettre les images dans le cache du navigateur.
         </div>
-        <div class="divImfSimple">
+        <div class="divImgSimple">
         <img src="IMAGES-ANALYSE/Capture%2010%20-%20.htaccess.png" alt="insertion-htacess-racine" title="image-htaccess" />
         </div>
     </article>
     <article class="article">
         <h3>Compression des pages de rendu</h3>
-                <div class="divImfSimple">
+                <div class="divImgSimple">
                     <img src="IMAGES-ANALYSE/Capture%204%20-%20Minify%20=%200.png" alt="capture-avant-minify" title="capture-etat-avant-minify" />
                 </div>
         
             <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Dans une moindre mesure il faut également reduire le temps de lecture du fichier CSS et JS.</div>
         
-        <div class="divImfSimple">
+        <div class="divImgSimple">
             <img src="IMAGES-ANALYSE/Capture%20CSS%20Mini.png" alt="cc-mini" title="css-mini" />
         </div>
         <div class="explications">
@@ -112,7 +112,7 @@
 
             <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balises du code html non optimisé (que des div).</div>
             <div class="explications"><i class="fas fa-arrow-right"></i> Il faut une structure, header, section, article, div, footer.</div>
-            <div class="divImfSimple">   
+            <div class="divImgSimple">   
                 <img src="IMAGES-ANALYSE/Cature%2016%20-%20indentation%20correct%20(section:%20article).png" />
             </div>
 
@@ -132,7 +132,7 @@
                     
         <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Manque balise label sur la page2.html</div>
         <div class="erreur"><i class="fas fa-exclamation-triangle"></i> >>page2.html devrait s'appeller contact.html</div>
-            <div class="divImfSimple"> 
+            <div class="divImgSimple"> 
              <img src="IMAGES-ANALYSE/Capture%2018%20-%20label.png" />
             </div>
         <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il vaut mieux mettre du texte qu'une image (analyse par le robot possible)</div>
@@ -146,13 +146,47 @@
                 </div>
         </div>
             <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Le retour des images:</div>
-            <div class="explications"><i class="fas fa-arrow-right"></i> Balise ALT et TITLE doivent être renseigné de façon explicite et unique. (ex: 1.jpg >> prise-de-photo.jp2, alt="prise-de-photo" title="shooting-photo")</div>
-             <div class="divImfSimple">
+            <div class="explications"><i class="fas fa-arrow-right"></i> Les balises ALT et TITLE des images "importantes" doivent être renseigné de façon explicite et unique. (ex: 1.jpg >> prise-de-photo.jp2, alt="prise-de-photo" title="shooting-photo")</div>
+             <div class="divImgSimple">
                 <img src="IMAGES-ANALYSE/Capture%2019%20-%20alt.png" />
             </div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balise meta description vide.</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> C'est la phrase qui s'affiche en premier lors de l'affichage sur un moteur de recherche, autant dire que si elle n'est pas remplie... rien ne s'affiche et l'utilisateur "ne sait pas ce que contient le site"</div>    
         </article>
 </section>
     
+    
+    
+<section id="partC">
+    <h2>C. Conclusion</h2>
+    <article class="article">
+        <h3>La liste des erreurs non exhaustive.</h3>
+        
+        <fieldset class="fieldsetPartC"><legend>Vitesse de chargement du site</legend>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Changer le format de certaines images vers des formats plus compressible (.bmp/ .jpg > .jp2)</div>
+             <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Compresser les images avec un lociciel (jusqu'à 87% pour ce site sur une image)</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Redimensionner les images à la taille ou elles vont s'affichée (gain de temps pour le navigateur, pas besoin de "réduire l'image une fois téléchargée")</div>
+             <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il faut utiliser le cache du navigateur (non pas pour chargé rapidement la première fois, mais pour mettre dans le cache les parties du site qui ne "changent pas souvant", afin d'accèlérer les prochaines visite.)</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Dans une moindre mesure il faut également reduire le temps de lecture du fichier CSS et JS.</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> Le but principale: réduire le poid des transferts et donc augmenter la vitesse d'affichage.</div> 
+        </fieldset>
+        <fieldset class="fieldsetPartC"><legend>Référencement</legend>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Absence de fichier sitemaps et robots.txt</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balises du code html non optimisé (que des div).</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balise des titres, ordre non respecté</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Manque balise label sur la page2.html</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Le nom des pages doivent "être parlante" >>page2.html devrait s'appellée contact.html</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Il vaut mieux mettre du texte qu'une image (analyse par le robot possible)</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Le retour des images: balises title et alt pour référencement.</div>
+            <div class="erreur"><i class="fas fa-exclamation-triangle"></i> Balise meta description vide</div>
+            <div class="explications"><i class="fas fa-arrow-right"></i> Le but principale: Faciliter le décodage de notre site aux robots pour un meilleur indexation dans les pages de résultat.</div> 
+        </fieldset>
+    </article>
+    <article class="article">
+        <h3>FIN</h3>
+        
+    </article>
+</section>
 </div>   
     
     
